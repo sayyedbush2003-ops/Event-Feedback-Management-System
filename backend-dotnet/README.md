@@ -1,120 +1,30 @@
-# Event Feedback Management System
+<div align="center">
 
-A full-stack web application developed as part of my internship project at Sysslan IT Solutions.
+# 🌟 Event Feedback Management System — Backend API
 
-## Project Overview
+[![.NET](https://img.shields.io/badge/.NET-10.0-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
+[![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)](https://learn.microsoft.com/en-us/dotnet/csharp/)
+[![Entity Framework](https://img.shields.io/badge/EF%20Core-10.0-512BD4?style=for-the-badge&logo=nuget&logoColor=white)](https://learn.microsoft.com/en-us/ef/core/)
+[![SQL Server](https://img.shields.io/badge/Microsoft%20SQL%20Server-CC292B?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)](https://www.microsoft.com/en-us/sql-server)
 
-The Event Feedback Management System allows users to submit feedback for events through a React frontend. The submitted feedback is sent to an ASP.NET Core Web API and stored in a SQL Server database.
+<br />
 
-Users can also view previously submitted feedback through the application.
+> ⚙️ **ASP.NET Core Web API service powered by Entity Framework Core and Microsoft SQL Server.**
 
-## Technologies Used
+---
 
-### Frontend
+</div>
 
-- React
-- JavaScript
-- HTML
-- CSS
-- Vite
+## 📡 API Endpoints
 
-### Backend
+- `GET /api/feedback`: Retrieves all submitted feedback.
+- `POST /api/feedback`: Submits and persists new feedback.
 
-- C#
-- ASP.NET Core Web API
-- Entity Framework Core
+## 🚀 How to Run
 
-### Database
-
-- Microsoft SQL Server
-
-## Main Features
-
-- Event feedback form
-- Form validation
-- Email validation
-- Feedback submission
-- REST API integration
-- Feedback storage in SQL Server
-- Retrieve and display submitted feedback
-- Success and error messages
-- Responsive user interface
-
-## Application Flow
-
-```text
-React Frontend
-      ↓
-ASP.NET Core Web API
-      ↓
-Entity Framework Core
-      ↓
-SQL Server
-
-API Endpoints
-Get All Feedback
-GET /api/feedback
-
-Retrieves all submitted feedback from the database.
-
-Submit Feedback
-POST /api/feedback
-
-Creates and stores a new feedback record in the database.
-
-Project Structure
-Event-Feedback-Management-System/
-│
-├── frontend/
-│
-├── backend-dotnet/
-│   ├── Controllers/
-│   ├── Data/
-│   ├── Models/
-│   ├── Migrations/
-│   └── Program.cs
-│
-├── .gitignore
-└── README.md
-Internship Tasks Completed
-Level 3 - Database Basics
-Set up SQL Server database
-Created feedback table
-Stored feedback form data
-Retrieved feedback records
-Level 4 - Frontend & Backend Connection
-Connected React frontend with backend API
-Implemented feedback submission
-Added success message
-Retrieved feedback from backend
-Added basic form validation
-Level 5 - Final Touch & Review
-Improved UI readability
-Verified navigation
-Verified database storage and retrieval
-Tested complete feedback workflow
-How to Run
-Prerequisites
-Node.js
-.NET SDK
-Microsoft SQL Server
-Frontend
-cd frontend
-npm install
-npm run dev
-Backend
-cd backend-dotnet
+```bash
 dotnet restore
 dotnet run
+```
 
-The frontend and backend should be running locally.
-
-Database
-
-The application uses Microsoft SQL Server with Entity Framework Core.
-
-The database is created using Entity Framework Core migrations.
-
-Author
-
-Bushra Sayyed
+Refer to the main [Root README](../README.md) for full project documentation.
