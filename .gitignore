@@ -1,0 +1,40 @@
+# React / Node
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+dist-ssr/
+*.local
+
+# .NET build outputs
+bin/
+**/bin/
+obj/
+**/obj/
+
+# Visual Studio / VS Code
+.vs/
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# User-specific files
+*.user
+*.suo
+
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db

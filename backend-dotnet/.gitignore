@@ -1,0 +1,26 @@
+# React / Node
+frontend/node_modules/
+frontend/dist/
+
+# .NET
+backend-dotnet/bin/
+backend-dotnet/obj/
+
+# Visual Studio / VS Code
+.vs/
+.vscode/
+
+# User-specific files
+*.user
+*.suo
+
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
