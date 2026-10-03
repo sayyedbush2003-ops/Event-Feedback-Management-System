@@ -1,3 +1,5 @@
+
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const highlights = [
@@ -16,6 +18,38 @@ const highlights = [
 ];
 
 function Home() {
+  const [feedbackCount, setFeedbackCount] = useState(0);
+  const [averageRating, setAverageRating] = useState(0);
+
+  useEffect(() => {
+    const fetchFeedbackStats = async () => {
+      try {
+        const response = await fetch('http://localhost:5216/api/feedback');
+
+        if (!response.ok) {
+          throw new Error('Failed to fetch feedback');
+        }
+
+        const data = await response.json();
+
+        setFeedbackCount(data.length);
+
+        const totalRating = data.reduce(
+          (sum, feedback) => sum + Number(feedback.rating || 0),
+          0
+        );
+
+        const average = data.length > 0 ? totalRating / data.length : 0;
+
+        setAverageRating(average);
+      } catch (error) {
+        console.error('Error fetching feedback stats:', error);
+      }
+    };
+
+    fetchFeedbackStats();
+  }, []);
+
   return (
     <>
       <section className="hero-section">
@@ -40,15 +74,15 @@ function Home() {
 
           <div className="hero-panel" aria-label="Event summary panel">
             <div className="mini-card">
-              <strong>120+</strong>
+              <strong>{feedbackCount}</strong>
               <span>Feedback submissions</span>
             </div>
             <div className="mini-card accent">
-              <strong>8</strong>
-              <span>Upcoming events</span>
+              <strong>4</strong>
+              <span>Available events</span>
             </div>
             <div className="mini-card">
-              <strong>4.8/5</strong>
+              <strong>{averageRating.toFixed(1)}/5</strong>
               <span>Average rating</span>
             </div>
           </div>
